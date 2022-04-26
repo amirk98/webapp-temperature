@@ -12,14 +12,14 @@ function DataParse() {
   const [columns, setColumns] = useState([]);
   const [data, setData] = useState([]);
   const [temp, setTemp] = useState([]);
-  const [unix, setUnix] = useState([]);
+  const [combine, setCombine] = useState([]);
   // process CSV data
   const processData = dataString => {
     const dataStringLines = dataString.split(/\r\n|\n/);
     const headers = dataStringLines[0].split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
     const list = [];
     const list2 = [];
-    const list3 = [];
+    const listCombine =[];
 
     for (let i = 1; i < dataStringLines.length; i++) {
       const row = dataStringLines[i].split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
@@ -41,11 +41,18 @@ function DataParse() {
         if (Object.values(obj).filter(x => x).length > 0) {
           list.push(obj);
 
-          // Get temperature column data
-          list2.push(parseFloat(obj.temp_c));
+          // Get unix_s column data
+          list2.push(parseFloat(obj.unix_s));
 
-          // Get temperature column data
-          list3.push(parseFloat(obj.unix));
+          // Combine temperature column data into list2
+          list2.push(parseFloat(obj.temp_c));
+          // console.log(list2);
+
+          // Combine object unix and temp_c
+          while(list2.length) 
+          listCombine.push(list2.splice(0,2));
+    
+          console.log(listCombine);
         }
       }
     }
@@ -60,7 +67,7 @@ function DataParse() {
     
     setData(list);
     setTemp(list2);
-    setUnix(list3)
+    setCombine(listCombine);
     setColumns(columns);
   }
 
@@ -86,7 +93,7 @@ function DataParse() {
     columns,
     data,
     temp,
-    unix
+    combine
   };
 
   const chartOpt = {
@@ -95,7 +102,7 @@ function DataParse() {
     },
     series: [
       {
-        data: temp
+        data: combine
       }
     ]
   };
