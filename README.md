@@ -1,12 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with Webapp-Temperature
+## About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Webapp-Temperature is a secure and fast app that predict temperature based on Regression model, designed with [DL4J](https://github.com/eclipse/deeplearning4j). It comes with data visualization graphics, easy to use for most users.\
+<img src="https://user-images.githubusercontent.com/94233069/165240908-4953c01f-24f6-4770-8741-f0dc8a6c7e6b.png" width="600" height="250">
+<img src="https://user-images.githubusercontent.com/94233069/165241413-0b6de289-e226-4b71-b9fb-1f1e6abfe172.png" width="600" height="250">
+
+This project was built with [React Js](https://github.com/facebook/create-react-app) and [Spring Boot](https://spring.io/projects/spring-boot).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you need to run:
 
-### `npm start`
+1. ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,6 +19,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+2. ### `backend-webapp`
+Run the Spring-Boot from IntelliJ.\
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
+
+3. ### `maildev`
+Install and run MailDev from CMD.\
+npm install.\
+npm run dev.\
+Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
+
+## Also
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
