@@ -1,18 +1,40 @@
-# Getting Started with Create React App
+# Getting Started with Webapp-Temperature
+Webapp-Temperature is a interactive and easy-to-use web application analysis to predict temperature based on large data, created using [DL4J](https://github.com/eclipse/deeplearning4j) model. Trained with 300k+ data to achieve high accuracy and precision model for prediction. Registration is more secure with email activation features to [MailDev](https://github.com/maildev/maildev) based with [Spring Security](https://spring.io/projects/spring-security) backend. Login to access Dashboard page that contains interactive chart and table for visualization. Parsing large data with CSV import and export features are available for analysis and local saving.\
+<img src="https://user-images.githubusercontent.com/94233069/165340282-932ccb3a-7c16-410a-ae56-2832f8d8e246.png" height="250" width="600" >
+<img src="https://user-images.githubusercontent.com/94233069/165340564-cb7b9e1c-1f95-4999-82ac-07f940a8b493.png" height="250" width="600" >
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project was created with [Create React App](https://github.com/facebook/create-react-app) and [Sring Boot](https://spring.io/projects/spring-boot).
 
-In the project directory, you can run:
+## Run The Repository
 
-### `npm start`
+Before run, make sure CSV file has headers as shown below and add another column for 'unix_s' with data of (unix/10^6) to avoid crash.\
+<img src="https://user-images.githubusercontent.com/94233069/165345302-1a21bdad-893a-46bc-9102-f3dcbf291187.png" height="200" width="450" >
 
-Runs the app in the development mode.\
+1. ### Run Frontend
+`npm start`
+Runs the app in the development mode from ReactJs.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+2. ### Run Backend
+Runs the app in the IntelliJ IDEA.\
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.\
+Open [http://localhost:8080/h2-console](http://localhost:8080/h2-console) to view h2 database.
+
+3. ### Open MailDev
+Runs the app in the CMD. This app will send email activation after register.
+```
+npm install maildev
+run maildev
+```
+Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `npm test`
 
@@ -68,3 +90,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contact
+Muhammad Amir\
+amir.kmrlzmn@gmail.com
