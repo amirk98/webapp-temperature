@@ -6,7 +6,7 @@ Webapp-Temperature is a interactive and easy-to-use web application analysis to 
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app) and [Sring Boot](https://spring.io/projects/spring-boot).
 
-## Run The Repository
+## Clone The Repository
 
 Before run, make sure CSV file has headers as shown below and add another column for 'unix_s' with data of (unix/10^6) to avoid crash.\
 <img src="https://user-images.githubusercontent.com/94233069/165345302-1a21bdad-893a-46bc-9102-f3dcbf291187.png" height="200" width="450" >
