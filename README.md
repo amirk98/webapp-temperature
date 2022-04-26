@@ -7,7 +7,10 @@ Webapp-Temperature is a secure and interactive web application to predict temper
 
 This project was built with [React Js](https://github.com/facebook/create-react-app) and [Spring Boot](https://spring.io/projects/spring-boot).
 
-## Available Scripts
+## Run The Repository
+
+Before run, make sure CSV file contains headers as shown below and define 'unix_s' header with data of unix/(10^7) to avoid crashing.\
+![image](https://user-images.githubusercontent.com/94233069/165338590-e50589d8-2f2b-4ea7-b930-4881dde212b9.png)
 
 In the project directory, you need to run:
 
@@ -33,7 +36,7 @@ npm run dev
 ```
 Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
 
-## Also
+## Available Scripts
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
