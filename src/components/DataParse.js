@@ -7,20 +7,20 @@ import { AppBar, Box, Toolbar, Button } from '@mui/material';
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 
-import { Line } from 'react-chartjs-2';
-
 function DataParse() {
 
   const [columns, setColumns] = useState([]);
   const [data, setData] = useState([]);
-  
-
+  const [temp, setTemp] = useState([]);
+  const [unix, setUnix] = useState([]);
   // process CSV data
   const processData = dataString => {
     const dataStringLines = dataString.split(/\r\n|\n/);
     const headers = dataStringLines[0].split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
-
     const list = [];
+    const list2 = [];
+    const list3 = [];
+
     for (let i = 1; i < dataStringLines.length; i++) {
       const row = dataStringLines[i].split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
       if (headers && row.length === headers.length) {
@@ -37,14 +37,19 @@ function DataParse() {
             obj[headers[j]] = d;
           }
         }
-
         // remove the blank rows
         if (Object.values(obj).filter(x => x).length > 0) {
           list.push(obj);
+
+          // Get temperature column data
+          list2.push(parseFloat(obj.temp_c));
+
+          // Get temperature column data
+          list3.push(parseFloat(obj.unix));
         }
       }
     }
-
+  
     // prepare columns list from headers
     const columns = headers.map(c => ({
       name: c,
@@ -52,8 +57,10 @@ function DataParse() {
       sortable: true
     }
     ));
-
+    
     setData(list);
+    setTemp(list2);
+    setUnix(list3)
     setColumns(columns);
   }
 
@@ -77,7 +84,9 @@ function DataParse() {
 
   const tableData = {
     columns,
-    data
+    data,
+    temp,
+    unix
   };
 
   const chartOpt = {
@@ -86,7 +95,7 @@ function DataParse() {
     },
     series: [
       {
-        data: [1,9,5,6,3,5,7,2,1,4,2,7,4,6,8]
+        data: temp
       }
     ]
   };
@@ -100,7 +109,9 @@ function DataParse() {
               </Toolbar>
             </AppBar>
         </Box>
-        <br></br>
+
+      <br></br>
+
       <h2>Temperature Dashboard</h2>
       <br></br>
       <input
@@ -108,6 +119,19 @@ function DataParse() {
         accept=".csv,.xlsx,.xls"
         onChange={handleFileUpload}
       />
+      <br></br><br></br>
+      <h4>Graph</h4>
+
+      <HighchartsReact
+        highcharts={Highcharts}
+        constructorType={"stockChart"}
+        options= {chartOpt}
+        // {data.length > 0 ? chartOpt:null}
+      />
+
+      <br></br><br></br><br></br>
+      <h4>Table Data</h4>
+      {console.log(data)}
       <DataTableExtensions {...tableData}>
       <DataTable
         pagination
@@ -117,12 +141,6 @@ function DataParse() {
         defaultSortFieldID={1}
         selectableRows
       /></DataTableExtensions>
-      <br></br>
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"stockChart"}
-        options={chartOpt}
-      />
 
     </div>
   );
