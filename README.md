@@ -1,7 +1,7 @@
 # Getting Started with Webapp-Temperature
 ## About The Project
 
-Webapp-Temperature is a secure and fast web that predict temperature based on Regression model, designed with [DL4J](https://github.com/eclipse/deeplearning4j). Machine Learning model was trained from 300k+ data, produce high accuracy prediction for you. Registering is more secure when email activation link will send to MailDev for confirmation. Login to start using the Dashboard that provides dynamic graphical and tabulation data. Upload your data with a simple click and it will parse at high-speed.\
+Webapp-Temperature is a secure and fast web that predict temperature based on Regression model, designed with [DL4J](https://github.com/eclipse/deeplearning4j). Machine Learning model is trained with 300k+ data, produces high accuracy prediction for any data. Registering is more secure when email activation link will send to MailDev for confirmation. Login to start using the Dashboard that provides dynamic graphical and tabulation data. Upload your data with a simple click and it will parse at high-speed.\
 <img src="https://user-images.githubusercontent.com/94233069/165240908-4953c01f-24f6-4770-8741-f0dc8a6c7e6b.png" width="600" height="250">
 <img src="https://user-images.githubusercontent.com/94233069/165241413-0b6de289-e226-4b71-b9fb-1f1e6abfe172.png" width="600" height="250">
 
