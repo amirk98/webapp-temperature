@@ -9,7 +9,7 @@ This project was created with [Create React App](https://github.com/facebook/cre
 ## Clone The Repository
 ### Note
 Before run, make sure CSV file has headers as shown below.\
-<img src="https://user-images.githubusercontent.com/94233069/165473697-43dc8747-fe34-4a71-9267-1053f64b3de1.png" height="200" width="450" >
+<img src="https://user-images.githubusercontent.com/94233069/165473697-43dc8747-fe34-4a71-9267-1053f64b3de1.png" height="200" width="330" >
 
 1. ### Run Frontend
 `npm start`
