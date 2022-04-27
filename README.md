@@ -1,35 +1,41 @@
-# Getting Started with Webapp-Temperature
-Webapp-Temperature is a interactive and easy-to-use web application analysis to predict temperature for large scale data. Developed using [DL4J](https://github.com/eclipse/deeplearning4j) model and trained with 300k+ data to achieve high accuracy and precision model for prediction. Registration is more secure with email activation features to [MailDev](https://github.com/maildev/maildev) based with [Spring Security](https://spring.io/projects/spring-security) backend. Login to access Dashboard page that contains interactive chart and table for visualization. Parsing large data with CSV import and export features are available for analysis and local saving.\
+# About Webapp-Temperature
+Webapp-Temperature is a interactive web application analysis to predict temperature for large scale data. Developed using [DL4J](https://github.com/eclipse/deeplearning4j) model and trained with 300k+ data to achieve high accuracy and precision model for prediction. Registration requires an email activation security from [MailDev](https://github.com/maildev/maildev) based with [Spring Security](https://spring.io/projects/spring-security) backend. Login to access Dashboard page that contains interactive chart and table for visualization. Parsing large data with CSV import and export features are available for analysis and local saving.\
 <img src="https://user-images.githubusercontent.com/94233069/165340282-932ccb3a-7c16-410a-ae56-2832f8d8e246.png" height="250" width="600" >
 <img src="https://user-images.githubusercontent.com/94233069/165340564-cb7b9e1c-1f95-4999-82ac-07f940a8b493.png" height="250" width="600" >
 
-
 This project was created with [Create React App](https://github.com/facebook/create-react-app) and [Sring Boot](https://spring.io/projects/spring-boot).
 
-## Clone The Repository
+## Getting Started
 ### Note
 Before run, make sure CSV file has headers as shown below.\
 <img src="https://user-images.githubusercontent.com/94233069/165473697-43dc8747-fe34-4a71-9267-1053f64b3de1.png" height="200" width="330" >
 
-1. ### Run Frontend
-`npm start`
-Runs the app in the development mode from ReactJs.\
+### 1. Clone The Repository
+```
+git clone https://github.com/amirk98/webapp-temperature.git
+```
+
+### 2. Run Frontend
+```
+npm start
+```
+Run the app in the development mode from ReactJs.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-2. ### Run Backend
-Runs the app in the IntelliJ IDEA.\
+### 3. Run Backend
+Run the app in the IntelliJ IDEA.\
 Open [http://localhost:8080](http://localhost:8080) to view it in your browser.\
 
-3. ### Open MailDev
-Runs the app in the CMD. This app will send email activation after register.
+### 4. Open MailDev
+Install and run the app from CMD. This app will send email activation after register.
 ```
 npm install maildev
 run maildev
 ```
-Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
+Open [http://localhost:1080](http://localhost:1080) to view MailDev in your browser.
 
 ## Available Scripts
 
