@@ -33,7 +33,7 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.\
 Install and run the app from CMD. This app will send email activation after register.
 ```
 npm install maildev
-run maildev
+maildev
 ```
 Open [http://localhost:1080](http://localhost:1080) to view MailDev in your browser.
 
