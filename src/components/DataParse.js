@@ -42,15 +42,14 @@ function DataParse() {
           list.push(obj);
 
           // Get unix_s column data
-          list2.push(parseFloat(obj.unix_s));
+          list2.push(parseInt(obj.unix / 1000));
 
           // Combine temperature column data into list2
-          list2.push(parseFloat(obj.temp_c));
-          // console.log(list2);
+          list2.push(parseFloat(obj.temp));
+          console.log(list2);
 
           // Combine object unix and temp_c
-          while(list2.length) 
-          listCombine.push(list2.splice(0,2));
+          while(list2.length) listCombine.push(list2.splice(0,2));
     
           console.log(listCombine);
         }
@@ -104,7 +103,10 @@ function DataParse() {
       {
         data: combine
       }
-    ]
+    ],
+    xAxis: {
+      type: 'datetime',
+    },
   };
 
   return (
