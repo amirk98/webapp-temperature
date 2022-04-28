@@ -16,6 +16,7 @@ git clone https://github.com/amirk98/webapp-temperature.git
 ```
 
 ### 2. Run Frontend
+Run the ReactJs
 ```
 npm start
 ```
@@ -26,7 +27,10 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### 3. Run Backend
-Run the app in the IntelliJ IDEA.\
+Run the app in the IntelliJ IDEA.
+```
+mvnw clean package
+```
 Open [http://localhost:8080](http://localhost:8080) to view it in your browser.\
 
 ### 4. Open MailDev
